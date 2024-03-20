@@ -105,11 +105,6 @@ a {
     position: relative;
 }
 
-.header .container {
-    /*display: flex;*/
-    /*padding-bottom: 0;*/
-    /*justify-content: space-between;*/
-}
 
 .logo {
     margin-right: 93px;
@@ -132,7 +127,7 @@ a {
     line-height: 1.9;
     color: white;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* одна строка для времени изменения цвета при ховер */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-button:hover,
@@ -154,7 +149,7 @@ a {
     color: var(--accent-text-color);
 }
 
-/*!* ---nav-menu---*!*/
+/*!* ---------------------------------------nav-menu---*!*/
 
 .header-nav {
     display: flex;
@@ -205,11 +200,11 @@ a {
 .active-page .header-menu-link,
 .active-page .header-menu-link::after {
     color: #2196f3;
-    transform: scaleX(1); /*-- отображения скорости полосы при hover i active --*/
+    transform: scaleX(1);
 }
 
 
-/*<!--===================== BURGER==================-->*/
+/*<!--=========================================================== BURGER==================-->*/
 /* 0 - 767 */
 @media screen and (max-width: 767px) {
     .header-nav-menu-list,
@@ -227,6 +222,10 @@ a {
         position: absolute;
         top: 20px;
         right: 50px;
+        border: none;
+        background-color: #6aef60;
+        cursor: pointer;
+        border-radius: 10px;
 
 
     }
@@ -239,6 +238,7 @@ a {
         padding: 0;
         line-height: 0;
         margin: 10px 0;
+
     }
 
     .burger-btn__icon {
@@ -257,10 +257,10 @@ a {
         width: 100%;
         height: 100vh;
         padding: 48px 0;
-        background-color: #ffffff;
+        background-color: #96d991;
         transform: translateY(-100%);
         transition: transform 500ms linear;
-        z-index: 2;
+        z-index: 12;
     }
 
     .mobile-menu.is-open {
@@ -360,11 +360,6 @@ a {
         }
     }
 
-    /*.active-page .mobile__header-menu-link,*/
-    /*.active-page .mobile__header-menu-link::after {*/
-    /*    color: var(--accent-text-color);*/
-    /*    transform: scaleX(1); !*-- отображения скорости полосы при hover i active --*!*/
-    /*}*/
 }
 
 @media screen and (min-width: 768px) {
@@ -387,7 +382,7 @@ a {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/headerimg-mobile.jpg);
     background-color: #c4c4c4;
     background-size: cover;
-    /*text-align: center; !*кнопка по центру *!*/
+
     margin: 0 auto; /*секция по центру */ /*задана ширина 1600+ марджин+ ограничения текста */
     width: 100%;
     padding-top: 118px;
@@ -406,10 +401,9 @@ a {
     font-weight: 900;
     font-size: 43px;
     line-height: 1.3;
-    /*text-align: center;*/
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    /*margin: 40px auto;*/
+
 }
 
 .hero-main-pretitle {
@@ -514,17 +508,9 @@ justify-content: space-between;
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    /*margin-left: -30px;*/
-    /*margin-bottom: -30px;*/
 }
 
 .advantages-item {
-    /*display: flex;*/
-    /*width: 100%;*/
-    /*margin-bottom: 30px;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
     display: inline-flex;
     align-items: center;
     margin-top: 30px;
@@ -534,8 +520,6 @@ justify-content: space-between;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-
 }
 
 
@@ -561,18 +545,6 @@ justify-content: space-between;
         flex-basis: calc(35% - 30px);
     }
 }
-
-.advntage-blok {
-    /*display: flex;*/
-    /*margin-bottom: 30px;*/
-}
-
-.advantage-pic {
-    /*display: block;*/
-    /*margin: 0 auto;*/
-    /*height: 120px;*/
-}
-
 
 
 @media screen and (min-width: 768px) {

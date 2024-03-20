@@ -5,9 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WebStudio</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
@@ -21,7 +18,7 @@
                     <a class="logo" href="./index.html"><span class="logo-blue">ФУТ</span>Больчик</a>
                     <ul class="header-nav-menu-list list">
                         <li class="header-nav-menu-item item"><a class="header-menu-link" href="./index.html">Главная</a></li>
-                        <li class="header-nav-menu-item item"><a class="header-menu-link" href="./portfolio.html">Про игру</a></li>
+                        <li class="header-nav-menu-item item"><a class="header-menu-link" href="#">Об игре</a></li>
                         <li class="header-nav-menu-item item"><a class="header-menu-link" href="">Контакты</a></li>
                     </ul>
                     <button class=" header-button btn" data-modal-open type="button">Заказать услугу</button>
@@ -46,8 +43,8 @@
                         </svg>
                     </button>
                     <ul class="mobile__header-nav-menu-list desk list">
-                        <li class="mobile__header-nav-menu-item item active-page"><a class="mobile__header-menu-link" href="./index.html">Студия</a></li>
-                        <li class="mobile__header-nav-menu-item item"><a class="mobile__header-menu-link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="mobile__header-nav-menu-item item active-page"><a class="mobile__header-menu-link" href="./index.html">Главная</a></li>
+                        <li class="mobile__header-nav-menu-item item"><a class="mobile__header-menu-link" href="#">Об игре</a></li>
                         <li class="mobile__header-nav-menu-item item"><a class="mobile__header-menu-link" href="">Контакты</a></li>
                     </ul>
 
@@ -88,57 +85,6 @@
 
         </section>
 
-
-        <!-- =================MODAL WINDOW================= -->
-<!--        <div class="backdrop is-hidden" data-modal>-->
-<!--            <div class="modal">-->
-<!--                <svg class="close-icon" data-modal-close width="11" height="11">-->
-<!--                    <use href="./img/sprite.svg#icon-close"></use>-->
-<!--                </svg>-->
-
-<!--                &lt;!&ndash;form modal window&ndash;&gt;-->
-
-<!--                <form action="modal" class="modal-form">-->
-<!--                    <b class="modal-form-head">Оставьте свои данные, мы вам перезвоним</b>-->
-<!--                    <label class="modal-form-field">-->
-<!--                        Имя-->
-<!--                        <span class="modal-form-input-wrapper">-->
-<!--                            <input type="text" name="user-name" class="modal-form-input" minlength="5" pattern="[a-zA-Zа-яёА-ЯЁ]+" title="Без цифр и символов" required />-->
-<!--                            <svg class="modal-form-icon" width="13" height="13">-->
-<!--                                <use href="./img/sprite.svg#name"></use>-->
-<!--                            </svg>-->
-<!--                        </span>-->
-<!--                    </label>-->
-
-<!--                    <label class="modal-form-field">-->
-<!--                        Телефон-->
-<!--                        <span class="modal-form-input-wrapper">-->
-<!--                            <input type="tel" name="user-phone" class="modal-form-input" pattern="+38[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="+380950010011" title="+380950010011" required />-->
-<!--                            <svg class="modal-form-icon" width="13" height="13">-->
-<!--                                <use href="./img/sprite.svg#phone2"></use>-->
-<!--                            </svg>-->
-<!--                        </span>-->
-<!--                    </label>-->
-<!--                    <label class="modal-form-field">-->
-<!--                        Почта-->
-<!--                        <span class="modal-form-input-wrapper">-->
-<!--                            <input type="email" name="user-email" class="modal-form-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />-->
-<!--                            <svg class="modal-form-icon" width="13" height="13">-->
-<!--                                <use href="./img/sprite.svg#mail"></use>-->
-<!--                            </svg>-->
-<!--                        </span>-->
-<!--                    </label>-->
-<!--                    <label class="modal-form-field">-->
-<!--                        Комментарий-->
-<!--                        <textarea name="user-message" class="modal-form-message" placeholder="Введите текст"></textarea>-->
-<!--                    </label>-->
-<!--                    <input type="checkbox" name="accept-policy" id="accept-policy" class="modal-form-checkbox visually-hidden" />-->
-<!--                    <label for="accept-policy" class="modal-form-checkbox-label">Соглашаюсь с рассылкой и принимаю&nbsp;<a class="modal-form-checkbox-link" href="">Условия договора</a></label>-->
-<!--                    <button type="submit" class="modal-form-btn">Отправить</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-
                             <!-- =======================ADVANTAGES================= -->
 
         <section class="advantages">
@@ -168,39 +114,11 @@
                     <h3 class="advantages-item-title">Мудромяч</h3>
                     <p class="advantages-item-pretitle">хитрый игровой мяч</p>
                 </li>
-<!--                </li>-->
-<!--                    <li class="advantages-item item pic-clock">-->
-<!--                        <div class="advntage-blok">-->
-<!--                            <svg class="advantage-pic" width="70" height="70">-->
-<!--                                <use href="./img/sprite.svg#clock"></use>-->
-<!--                            </svg>-->
-<!--                        </div>-->
-<!--                        <h3>Пунктуальность</h3>-->
-<!--                        <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>-->
-<!--                    </li>-->
-<!--                    <li class="advantages-item item pic-diagrama">-->
-<!--                        <div class="advntage-blok">-->
-<!--                            <svg class="advantage-pic" width="70" height="70">-->
-<!--                                <use href="./img/sprite.svg#diagram"></use>-->
-<!--                            </svg>-->
-<!--                        </div>-->
-<!--                        <h3>Планирование</h3>-->
-<!--                        <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>-->
-<!--                    </li>-->
-<!--                    <li class="advantages-item item pic-cosmo">-->
-<!--                        <div class="advntage-blok">-->
-<!--                            <svg class="advantage-pic" width="70" height="70">-->
-<!--                                <use href="./img/sprite.svg#astronaut"></use>-->
-<!--                            </svg>-->
-<!--                        </div>-->
-<!--                        <h3>Современные технологии</h3>-->
-<!--                        <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>-->
-<!--                    </li>-->
+
                 </ul>
             </div>
         </section>
 
-<!--        <script src="./js/modal.js"></script>-->
         <script src="./menu.js"></script>
     </body>
 </html>
