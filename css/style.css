@@ -1,0 +1,582 @@
+/*---------------------------base----------------*/
+
+:root {
+    --main-text-color: #f1eeee;
+    --title-text-color: #212121;
+    --accent-text-color: #2ba622;
+    --white-color: #ffffff;
+    --bgr-footer-color: #2f303a;
+    --font-family-main: 'Roboto', sans-serif;
+}
+
+body {
+    color: var(--main-text-color);
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+
+img {
+    display: block;
+    /*max-width: 100%;*/
+    height: auto;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+    .section {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+/*------------------------------------шрифт -------------------*/
+
+.text-minor {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+    .text-minor {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+}
+
+/*-------------------------------------------Reset------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.list h3 {
+    color: var(--title-text-color);
+}
+
+.list,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-text-color);
+    letter-spacing: 0.03em;
+}
+
+/*-----------------------------------------------------------------------*/
+
+.header {
+    border-bottom: 1px solid #ececec;
+    background-color: rgba(83,234,44,0.7);
+    position: relative;
+}
+
+.header .container {
+    /*display: flex;*/
+    /*padding-bottom: 0;*/
+    /*justify-content: space-between;*/
+}
+
+.logo {
+    margin-right: 93px;
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.header-button{
+
+    border-radius: 4px;
+    border: 0;
+    padding: 10px 32px;
+    background-color: var(--accent-text-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* одна строка для времени изменения цвета при ховер */
+}
+
+.header-button:hover,
+.header-button:focus {
+    background-color: #28c91c;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .logo {
+        margin-right: 88px;
+        font-size: 24px;
+
+    }
+}
+
+.logo-blue {
+    color: var(--accent-text-color);
+}
+
+/*!* ---nav-menu---*!*/
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav-menu-list {
+    display: flex;
+    gap: 50px;
+}
+
+
+.header-menu-link {
+    position: relative;
+    display: inline-block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 500;
+    color: var(--title-text-color);
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus {
+    color: var(--accent-text-color);
+    transition: color 250ms ease-in-out;
+}
+
+.header-menu-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-text-color);
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 350ms ease-in-out;
+}
+
+.header-nav-menu-item:hover .header-menu-link::after {
+    transform: scaleX(1);
+}
+
+
+.active-page .header-menu-link,
+.active-page .header-menu-link::after {
+    color: #2196f3;
+    transform: scaleX(1); /*-- отображения скорости полосы при hover i active --*/
+}
+
+
+/*<!--===================== BURGER==================-->*/
+/* 0 - 767 */
+@media screen and (max-width: 767px) {
+    .header-nav-menu-list,
+    .header-contacts-list,
+    .header-button,
+    .header-contacts {
+        display: none;
+    }
+    .header-nav{
+        padding: 30px;
+    }
+
+    .burger-btn{
+
+        position: absolute;
+        top: 20px;
+        right: 50px;
+
+
+    }
+
+
+    .mobile-menu__close {
+
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        line-height: 0;
+        margin: 10px 0;
+    }
+
+    .burger-btn__icon {
+        fill: var(--title-text-color);
+    }
+
+    .burger-btn:hover .burger-btn__icon,
+    .burger-btn:focus .burger-btn__icon {
+        fill: var(--accent-text-color);
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 48px 0;
+        background-color: #ffffff;
+        transform: translateY(-100%);
+        transition: transform 500ms linear;
+        z-index: 2;
+    }
+
+    .mobile-menu.is-open {
+        transform: translateY(0%);
+    }
+
+    .mobile-menu__container {
+        width: 430px;
+        padding: 0 15px;
+        margin: 0 auto;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .mobile-menu__close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    .mobile-menu__close-icon {
+        fill: var(--title-text-color);
+    }
+
+    .mobile-menu__close:hover .mobile-menu__close-icon,
+    .mobile-menu__close:focus .mobile-menu__close-icon {
+        fill: var(--accent-text-color);
+    }
+
+    .mobile__header-nav-menu-list {
+        display: block;
+    }
+
+    .mobile__header-menu-link {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: var(--title-text-color);
+    }
+
+    .mobile__header-menu-link:hover,
+    .mobile__header-menu-link:focus {
+        color: var(--accent-text-color);
+    }
+
+    .mobile__header-nav-menu-item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    .mobile__adress {
+        margin-top: auto;
+    }
+
+    .mobile__header-contacts-list {
+        margin-bottom: 64px;
+    }
+
+    .adres_header-menu-link {
+        font-weight: 500;
+        font-size: 24px;
+        letter-spacing: 0.02em;
+    }
+
+    .color-phone {
+        color: var(--accent-text-color);
+        font-size: 34px;
+        line-height: 1.17;
+        margin-bottom: 32px;
+    }
+
+    .mobile__social-nav-menu-list {
+        display: flex;
+        width: 100%;
+    }
+
+    .mobile__social-menu-item {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        padding-right: 10px;
+    }
+
+    .mobile__social-menu-item:not(:first-child) {
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+        padding-left: 10px;
+    }
+
+    .mobile__social-link {
+        color: var(--accent-text-color);
+    }
+
+    @media screen and (max-width: 400px) {
+        .mobile__social-menu-item {
+            font-size: 14px;
+        }
+    }
+
+    /*.active-page .mobile__header-menu-link,*/
+    /*.active-page .mobile__header-menu-link::after {*/
+    /*    color: var(--accent-text-color);*/
+    /*    transform: scaleX(1); !*-- отображения скорости полосы при hover i active --*!*/
+    /*}*/
+}
+
+@media screen and (min-width: 768px) {
+    .burger-btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+
+
+
+/*================================================HERO=====================================================*/
+
+
+.hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/headerimg-mobile.jpg);
+    background-color: #c4c4c4;
+    background-size: cover;
+    /*text-align: center; !*кнопка по центру *!*/
+    margin: 0 auto; /*секция по центру */ /*задана ширина 1600+ марджин+ ограничения текста */
+    width: 100%;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    height: 768px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container .main{
+    position: relative;
+}
+
+.hero-main-title {
+    font-weight: 900;
+    font-size: 43px;
+    line-height: 1.3;
+    /*text-align: center;*/
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    /*margin: 40px auto;*/
+}
+
+.hero-main-pretitle {
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: rgba(220, 215, 234, 0.7)
+}
+.hero-main-png {
+    position: absolute;
+    right: 10px;
+    width: 52vh;
+    top: 165px;
+}
+
+@media only screen and (min-width: 320px), (min-resolution: 192dpi) and (max-width: 400px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-main-png {
+        width: 44vh;
+        right: calc(33% - 30vh / 2);
+        top: 260px;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 767px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/headerimg-mobile@2x.jpg);
+    }
+    .hero-main-png {
+        width: 44vh;
+        right: calc(33% - 30vh / 2);
+        top: 213px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/headerimg-tablet.jpg);
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/headerimg-tablet@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/headerimg-desktop.jpg);
+        max-width: 1600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}
+
+.hero-button {
+    position: relative;
+    border-radius: 4px;
+    border: 0;
+    padding: 10px 32px;
+    margin-top: 30px;
+    background-color: var(--accent-text-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.9;
+    color: white;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* одна строка для времени изменения цвета при ховер */
+    z-index: 5;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #28c91c;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*==============================================================advantages===============================================*/
+.advantages{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.advantage-title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.advantage-pretitle{
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+}
+
+
+.advantages-list {
+justify-content: space-between;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-left: -30px;*/
+    /*margin-bottom: -30px;*/
+}
+
+.advantages-item {
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*margin-bottom: 30px;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
+    display: inline-flex;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.advantages-item:hover{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+.advantages-item-title{
+    margin-left: 30px;
+}
+.advantages-item-pretitle{
+    margin-left: 20px;
+    color: #2f303a;
+    font-size: 14px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .advantages-item {
+        flex-basis: calc(50% - 30px);
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .advantages-item {
+        flex-basis: calc(35% - 30px);
+    }
+}
+
+.advntage-blok {
+    /*display: flex;*/
+    /*margin-bottom: 30px;*/
+}
+
+.advantage-pic {
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    /*height: 120px;*/
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .advantages h3 {
+        text-align: left;
+    }
+}
